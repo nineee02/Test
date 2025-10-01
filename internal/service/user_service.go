@@ -69,6 +69,10 @@ func (s *userService) Login(ctx context.Context, username, password string) (str
 		return "", fmt.Errorf("invalid username or password")
 	}
 
+	if decryptedPassword != password{
+		return "", fmt.Errorf("invalid username or password")
+	}
+
 	// Generate JWT token
 	token, err := util.GenerateJWT(user.UserID.String(), s.cfg.API.JwtSecret)
 	if err != nil {
