@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  server_url: "http://localhost"
+  allow_headers:
+    - "Content-Type"
+    - "Authorization"
+    - "Accept-Language"
+    - "Connection"
+    - "Upgrade"
+    - "*"
+  allow_methods:
+    - "GET"
+    - "POST"
+    - "PUT"
+    - "DELETE"
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: root
+  db_name: godata
+api:
+  aes_key: asd2av2ads56f2adasc2x8adhdyehncs
+  soft_key: mbedamogy1q8s9ch
